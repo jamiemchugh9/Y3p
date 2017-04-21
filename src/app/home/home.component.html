@@ -1,0 +1,28 @@
+<div class="col-md-6 col-md-offset-3">
+    <h1>Hi {{currentUser.firstName}}!</h1>
+    <a [routerLink]="['/login']" (click)="deleteUser(currentUser.id)">Delete</a>
+    <h3>Details:</h3>
+    <ul>
+        <li>
+            Username: {{currentUser.username}}
+        </li>
+        <li>
+            First name: {{currentUser.firstName}}
+        </li>
+         <li>
+            Last name: {{currentUser.lastName}}
+        </li>
+         <li>
+            Weight: {{currentUser.weight }}
+        </li>
+         <li>
+            Height: {{currentUser.height}}
+        </li>
+       
+localStorage.clear();
+        
+    </ul>
+    
+ <h3>{{bmiCalc()}}</h3>
+
+</div>
