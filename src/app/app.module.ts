@@ -18,6 +18,9 @@ import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { BmiCalculatorComponent} from './bmi-calculator/index';
+import { NutritionixComponent } from './nutritionix/nutritionix.component';
+import { NutritionixService } from './nutritionix/nutritionix.service';
+
 
 
 
@@ -35,6 +38,8 @@ import { BmiCalculatorComponent} from './bmi-calculator/index';
         LoginComponent,
         RegisterComponent,
 BmiCalculatorComponent,
+  AppComponent,
+    NutritionixComponent
 
     ],
     providers: [
@@ -42,12 +47,14 @@ BmiCalculatorComponent,
         AlertService,
         AuthenticationService,
         UserService,
+        NutritionixService,
 
         // providers used to create fake backend
         fakeBackendProvider,
         MockBackend,
         BaseRequestOptions
     ],
+    
     bootstrap: [AppComponent]
 })
 
